@@ -1,0 +1,167 @@
+:root {
+  --color-background: hsl(225, 100%, 94%);
+  --color-background-container: hsl(0, 100%, 100%);
+  --color-background-media: hsl(225, 100%, 98%);
+  --color-text: hsl(224, 23%, 55%);
+  --color-heading: hsl(223, 47%, 23%);
+  --color-button: hsl(245, 75%, 52%);
+  --color-hover: hsl(244, 83%, 68%);
+  --border-radius-card: 15px;
+  --border-radius-button: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 35%;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  border-radius: var(--border-radius-button);
+  padding: 1.5rem;
+  width: 100%;
+  background-color: var(--color-button);
+  color: var(--color-background-media);
+  font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-hover);
+}
+
+a {
+  color: var(--color-button);
+}
+
+a:hover {
+  color: var(--color-hover);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  width: 32.5rem;
+  height: 56.5rem;
+  background-color: var(--color-background-container);
+  border-radius: var(--border-radius-card);
+  color: var(--color-text);
+}
+
+.img-hero {
+  width: 100%;
+  border-top-left-radius: var(--border-radius-card);
+  border-top-right-radius: var(--border-radius-card);
+}
+
+.container {
+  padding: 2rem 2.5rem;
+}
+
+.container-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-head p {
+  text-align: center;
+}
+
+.container-media {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-background-media);
+  border-radius: var(--border-radius-button);
+  padding: 1.5rem 1rem;
+  margin: 2.5rem 0;
+}
+
+.container-media img {
+  width: 50px;
+  height: 100%;
+}
+
+.media-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 3.6rem;
+}
+
+.cancel {
+  text-align: center;
+  font-weight: 700;
+}
+
+.cancel:hover {
+  color: var(--color-heading);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+  }
+
+  h1 {
+    margin-top: 1rem;
+  }
+
+  .card {
+    width: 40.5rem;
+    height: 63rem;
+  }
+
+  .container {
+    padding: 2rem 4rem;
+  }
+
+  .media-plan {
+    margin-right: 8rem;
+  }
+}
